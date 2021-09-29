@@ -3,9 +3,6 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
-  environment {
-    AWS_CREDS = credentials('lmbaschiera-aws-creds')
-  }
   stages {
     stage('Deploy') {
       steps {
