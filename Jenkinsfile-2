@@ -6,6 +6,7 @@ pipeline {
   stages {
     stage('Deploy') {
       steps {
+	    sh 'whoami'
         sh 'docker context use myecscontext'
         sh 'docker compose up'
         sh 'docker compose ps --format json'
