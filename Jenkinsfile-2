@@ -3,6 +3,10 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
+  environment {
+    AWS_ACCESS_KEY=AKIAYITL6ZGALHUGXEHC
+	AWS_SECRET_KEY=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
+  }
   stages {
     stage('Deploy') {
       steps {
