@@ -4,8 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
   environment {
-    AWS_ACCESS_KEY='AKIAYITL6ZGALHUGXEHC'
-	AWS_SECRET_KEY='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'
+    AWS_CREDS = credentials('lmbaschiera-aws-creds')
   }
   stages {
     stage('Deploy') {
