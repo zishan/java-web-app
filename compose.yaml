@@ -1,3 +1,4 @@
+x-aws-vpc: "vpc-04b593c8d73a0d9b1"
 services:
   web:
     image: darinpope/java-web-app:latest
