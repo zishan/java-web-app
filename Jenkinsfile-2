@@ -6,7 +6,6 @@ pipeline {
   environment {
     AWS_ACCESS_KEY='AKIAYITL6ZGALHUGXEHC'
 	AWS_SECRET_KEY='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'
-	PATH='PATH+EXTRA=/usr/local/bin'
   }
   stages {
     stage('Deploy') {
