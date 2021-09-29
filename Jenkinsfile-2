@@ -6,13 +6,11 @@ pipeline {
   stages {
     stage('Deploy') {
       steps {
-	    withAWS(credentials: 'lmbaschiera', region: 'us-east-2'){
-	      sh 'whoami'
-	      sh 'docker context ls'
-          sh 'docker context use myecscontext'
-          sh 'docker compose up'
-          sh 'docker compose ps --format json'
-		}
+	    sh 'whoami'
+	    sh 'docker context ls'
+        sh 'docker context use myecscontext'
+        sh 'docker compose up'
+        sh 'docker compose ps --format json'
       }
     }
   }
