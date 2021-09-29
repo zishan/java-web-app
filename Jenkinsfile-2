@@ -13,8 +13,8 @@ pipeline {
 	    sh 'printenv'
 	    sh 'docker context ls'
         sh 'docker context use myecscontext'
-        sh 'docker-compose up'
-        sh 'docker-compose ps --format json'
+        sh 'docker compose up'
+        sh 'docker compose ps --format json'
       }
     }
   }
