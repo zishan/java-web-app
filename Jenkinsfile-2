@@ -3,17 +3,16 @@ pipeline {
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
   }
-  environment {
-    AWS_CREDS = credentials('lmbaschiera')
-  }
   stages {
     stage('Deploy') {
       steps {
-	    sh 'whoami'
-	    sh 'docker context ls'
-        sh 'docker context use myecscontext'
-        sh 'docker compose up'
-        sh 'docker compose ps --format json'
+	    withAWS(credentials: 'lmbaschiera', region: 'us-east-2'){
+	      sh 'whoami'
+	      sh 'docker context ls'
+          sh 'docker context use myecscontext'
+          sh 'docker compose up'
+          sh 'docker compose ps --format json'
+		}
       }
     }
   }
