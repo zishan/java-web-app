@@ -10,6 +10,7 @@ pipeline {
   stages {
     stage('Deploy') {
       steps {
+	    sh 'whoami'
 	    sh 'docker context ls'
         sh 'docker context use myecscontext'
         sh 'docker compose up'
