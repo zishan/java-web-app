@@ -1,4 +1,4 @@
-x-aws-vpc: "vpc-0dece3d7dce2d0578"
+x-aws-vpc: "vpc-8fbacfe4"
 services:
   web:
     image: darinpope/java-web-app:latest
