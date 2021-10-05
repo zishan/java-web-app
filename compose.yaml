@@ -1,6 +1,6 @@
 services:
   web:
-    image: darinpope/java-web-app:latest
+    image: lmbaschiera/java-web-app:latest
     build:
       context: .
     ports:
