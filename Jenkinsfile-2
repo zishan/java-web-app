@@ -6,7 +6,6 @@ pipeline {
   stages {
     stage('Deploy') {
       steps {
-	    sh '/usr/local/bin/docker login
 	    sh '/usr/local/bin/docker context ls'
         sh '/usr/local/bin/docker context use default'
 		sh '/usr/local/bin/docker compose build'
