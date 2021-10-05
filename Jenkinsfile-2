@@ -8,7 +8,7 @@ pipeline {
       steps {
 	    sh 'whoami'
 	    sh '/usr/local/bin/docker context ls'
-        sh '/usr/local/bin/docker context use myecscontext'
+        sh '/usr/local/bin/docker context use ecscontext'
         sh '/usr/local/bin/docker compose up'
         sh '/usr/local/bin/docker compose ps --format json'
       }
