@@ -8,6 +8,8 @@ pipeline {
       steps {
 	    sh '/usr/local/bin/docker context ls'
         sh '/usr/local/bin/docker context use ecscontext'
+		sh '/usr/local/bin/docker build'
+		sh '/usr/local/bin/docker push'
         sh '/usr/local/bin/docker compose up'
         sh '/usr/local/bin/docker compose ps --format json'
       }
